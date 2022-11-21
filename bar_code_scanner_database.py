@@ -1,3 +1,12 @@
+#hopefully you opened the folder (and not the file directly)
+#run "python3 -m venv .venv" to create the python virtual environment
+
+#you should see "venv" in the bottom right, but if not, run Activate.ps1 manualy:
+# cd ./.venv/Scripts
+# ./Activate.ps1
+# then under File -> Add folder to Workspace
+#
+
 import mysql.connector
 #to import this library, type "pip install mysql.connector" in Terminal (in your .venv)
 
@@ -8,6 +17,8 @@ import geocoder
 g = geocoder.ip('me')
 latitude = g.latlng[0]
 longitude = g.latlng[1]
+
+#add folder to workspace (under the file menu) if you're having trouble with your imports
 
 #ask for user input
 barcode = input("Scan a barcode (type 'exit' when done):")
